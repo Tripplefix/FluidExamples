@@ -48,16 +48,18 @@ export class AzureFunctionTokenProvider implements ITokenProvider {
 	}
 
 	private async getToken(tenantId: string, documentId: string | undefined): Promise<string> {
-		const response = await axios.get(this.azFunctionUrl, {
-			params: {
-				tenantId,
-				documentId,
-				userName: this.user?.name,
-				userId: this.user?.id,
-				additionalDetails: this.user?.additionalDetails,
-			},
-		});
-		return response.data as string;
+		// const response = await axios.get(this.azFunctionUrl, {
+		// 	params: {
+		// 		tenantId,
+		// 		documentId,
+		// 		userName: this.user?.name,
+		// 		userId: this.user?.id,
+		// 		additionalDetails: this.user?.additionalDetails,
+		// 	},
+		// });
+		// return response.data as string;
+
+		return "3xT6WEULxTipatpvBdsjY0f6mybuRvIL5JOjWjRnaM2uYvSvZg0WJQQJ99AIACw38mny71xuAAAAAZFR7yGb"
 	}
 }
 
