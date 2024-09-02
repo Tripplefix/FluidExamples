@@ -25,6 +25,7 @@ jobs:
         env:
           AZURE_TENANT_ID: dc3f3586-b7df-44ad-ba6b-eb4d9f5397ae
           FLUID_CLIENT: azure
+          AZURE_ORDERER: https://eu.fluidrelay.azure.com
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_WAVE_0AC36B803 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
