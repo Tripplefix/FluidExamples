@@ -21,10 +21,14 @@ if (local) {
 const remoteConnectionConfig: AzureRemoteConnectionConfig = {
 	type: "remote",
 	tenantId: process.env.AZURE_TENANT_ID!,
-	tokenProvider: new AzureFunctionTokenProvider(
-		process.env.AZURE_FUNCTION_TOKEN_PROVIDER_URL!,
-		azureUser,
-	),
+	// tokenProvider: new AzureFunctionTokenProvider(
+	// 	process.env.AZURE_FUNCTION_TOKEN_PROVIDER_URL!,
+	// 	azureUser,
+	// ),
+	tokenProvider: new InsecureTokenProvider(
+		"3xT6WEULxTipatpvBdsjY0f6mybuRvIL5JOjWjRnaM2uYvSvZg0WJQQJ99AIACw38mny71xuAAAAAZFR7yGb",
+		user
+	  ),
 	endpoint: process.env.AZURE_ORDERER!,
 };
 
